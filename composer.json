@@ -1,9 +1,11 @@
 {
   "name": "studio/novacron",
-  "description": "Manage schedule the nova way",
+  "description": "Manage laravel schedule the nova way",
   "keywords": [
     "laravel",
-    "nova"
+    "nova",
+    "schedule",
+    "codestudio"
   ],
   "license": "MIT",
   "scripts": {
@@ -12,7 +14,7 @@
   "require": {
     "php": ">=7.1.0",
     "owenmelbz/nova-radio-field": "^0.0.5",
-    "studio/laravel-totem": "@dev"
+    "studio/laravel-totem": "^4.0.0"
   },
   "require-dev": {
     "mockery/mockery": "^1.0",
@@ -43,10 +45,6 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "repositories": {
-    "totem": {
-      "type": "path",
-      "url": "../laravel-totem"
-    },
     "remote": {
       "type": "composer",
       "url": "https://nova.laravel.com"
