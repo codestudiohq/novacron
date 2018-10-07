@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <heading class="mb-6">Novacron</heading>
+    <div>
+        <heading class="mb-6">Novacron</heading>
 
 
-  </div>
+    </div>
 </template>
 
 <script>
@@ -22,9 +22,6 @@
           .get('/novacron/api/tasks')
           .then(response => {
             this.tasks = response.data
-          })
-          .catch(error => {
-            console.log(error);
           });
       },
     }

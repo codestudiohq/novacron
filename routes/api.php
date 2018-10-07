@@ -13,5 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/tasks', "Studio\Novacron\Http\Controllers\TasksController@index");
-Route::get('/frequencies', "Studio\Novacron\Http\Controllers\FrequenciesController@index");
+Route::get('/tasks', "Studio\Novacron\Http\Controllers\TasksController@index")
+    ->name("studio.novacron.tasks");
+Route::get('/frequencies', "Studio\Novacron\Http\Controllers\FrequenciesController@index")
+    ->name("studio.novacron.task.frequencies");;

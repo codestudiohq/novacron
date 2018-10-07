@@ -1,11 +1,11 @@
 <template>
-  <field-wrapper>
-    <input
-        type="hidden"
-        :id="field.attribute"
-        v-model="value"
-    ></input>
-  </field-wrapper>
+    <field-wrapper>
+        <input
+            type="hidden"
+            :id="field.attribute"
+            v-model="value"
+        />
+    </field-wrapper>
 </template>
 
 <script>
