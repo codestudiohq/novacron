@@ -26,6 +26,6 @@ class CronExpression implements Rule
      */
     public function message()
     {
-        return "This :attribute must be a valid cron expression.";
+        return 'This :attribute must be a valid cron expression.';
     }
 }

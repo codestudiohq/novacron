@@ -2,10 +2,9 @@
 
 namespace Studio\Novacron\Policies;
 
-
 use App\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
 use Studio\Totem\Result;
+use Illuminate\Auth\Access\HandlesAuthorization;
 
 class ResultPolicy
 {

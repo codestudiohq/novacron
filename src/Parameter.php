@@ -1,14 +1,11 @@
 <?php
 
-
 namespace Studio\Novacron;
 
-
+use Studio\Totem\Totem;
+use Laravel\Nova\Resource;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Resource;
-use Studio\Totem\Totem;
 
 class Parameter extends Resource
 {
@@ -31,7 +28,6 @@ class Parameter extends Resource
      *
      * @var array
      */
-
     public static $search = [
 
     ];
@@ -52,7 +48,7 @@ class Parameter extends Resource
     public function fields(Request $request)
     {
         return [
-            Select::make("Name")
+            Select::make('Name')
                 ->options(collect(Totem::frequencies())->mapWithKeys(function ($item) {
                     return [$item['interval'] => $item['label']];
                 })->toArray())
@@ -70,6 +66,7 @@ class Parameter extends Resource
     {
         return [];
     }
+
     /**
      * Get the filters available for the resource.
      *
@@ -80,6 +77,7 @@ class Parameter extends Resource
     {
         return [];
     }
+
     /**
      * Get the lenses available for the resource.
      *
@@ -90,6 +88,7 @@ class Parameter extends Resource
     {
         return [];
     }
+
     /**
      * Get the actions available for the resource.
      *
