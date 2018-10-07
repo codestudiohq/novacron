@@ -2,14 +2,14 @@
 
 namespace Studio\Novacron\Actions;
 
+use Studio\Totem\Task;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Laravel\Nova\Actions\Action;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Fields\ActionFields;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
-use Studio\Totem\Task;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
 class ExecuteTask extends Action implements ShouldQueue
 {
@@ -20,7 +20,7 @@ class ExecuteTask extends Action implements ShouldQueue
      *
      * @var string
      */
-    public $name = "Execute";
+    public $name = 'Execute';
 
     /**
      * Perform the action on the given models.
@@ -34,7 +34,8 @@ class ExecuteTask extends Action implements ShouldQueue
         $models->each(function (Task $task) {
             app('totem.tasks')->execute($task);
         });
-        return Action::message("Task(s) queued for execution");
+
+        return Action::message('Task(s) queued for execution');
     }
 
     /**

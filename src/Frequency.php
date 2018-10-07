@@ -1,17 +1,12 @@
 <?php
 
-
 namespace Studio\Novacron;
 
-
-use Illuminate\Http\Request;
-use Laravel\Nova\Contracts\ListableField;
-use Laravel\Nova\Fields\HasMany;
-use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Resource;
-use Studio\Novacron\Fields\Frequency as Frequencies;
-use Studio\Novacron\Fields\Hidden;
 use Studio\Totem\Totem;
+use Laravel\Nova\Resource;
+use Illuminate\Http\Request;
+use Studio\Novacron\Fields\Hidden;
+use Studio\Novacron\Fields\Frequency as Frequencies;
 
 class Frequency extends Resource
 {
@@ -34,7 +29,6 @@ class Frequency extends Resource
      *
      * @var array
      */
-
     public static $search = [
 
     ];
@@ -55,9 +49,9 @@ class Frequency extends Resource
     public function fields(Request $request)
     {
         return [
-            Hidden::make("Label"),
-            Frequencies::make("Frequency", "interval")
-                ->withMeta(["parameters" => $this->parameters])
+            Hidden::make('Label'),
+            Frequencies::make('Frequency', 'interval')
+                ->withMeta(['parameters' => $this->parameters])
                 ->options(Totem::frequencies()),
         ];
     }
@@ -72,6 +66,7 @@ class Frequency extends Resource
     {
         return [];
     }
+
     /**
      * Get the filters available for the resource.
      *
@@ -82,6 +77,7 @@ class Frequency extends Resource
     {
         return [];
     }
+
     /**
      * Get the lenses available for the resource.
      *
@@ -92,6 +88,7 @@ class Frequency extends Resource
     {
         return [];
     }
+
     /**
      * Get the actions available for the resource.
      *

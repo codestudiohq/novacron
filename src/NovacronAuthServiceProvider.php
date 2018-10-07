@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Studio\Novacron;
 
-use Studio\Novacron\Policies\ResultPolicy;
 use Studio\Totem\Result;
-use Illuminate\Support\Facades\Gate;
+use Studio\Novacron\Policies\ResultPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class NovacronAuthServiceProvider extends ServiceProvider

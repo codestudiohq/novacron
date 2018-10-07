@@ -10,7 +10,6 @@ use Studio\Novacron\Http\Middleware\Authorize;
 
 class ToolServiceProvider extends ServiceProvider
 {
-
     /**
      * Bootstrap any application services.
      *
@@ -25,7 +24,7 @@ class ToolServiceProvider extends ServiceProvider
             Nova::resources([
                 Task::class,
                 Frequency::class,
-                Result::class
+                Result::class,
             ]);
         });
 

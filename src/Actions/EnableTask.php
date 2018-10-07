@@ -2,15 +2,13 @@
 
 namespace Studio\Novacron\Actions;
 
+use Studio\Totem\Task;
 use Illuminate\Bus\Queueable;
-use function is_null;
-use function isEmpty;
 use Laravel\Nova\Actions\Action;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Fields\ActionFields;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
-use Studio\Totem\Task;
 
 class EnableTask extends Action
 {
@@ -21,7 +19,7 @@ class EnableTask extends Action
      *
      * @var string
      */
-    public $name = "Enable";
+    public $name = 'Enable';
 
     /**
      * Perform the action on the given models.
@@ -34,7 +32,7 @@ class EnableTask extends Action
     {
         $models->each(function (Task $task) {
             if ($task->expression || $task->frequencies()->count()) {
-                app('totem.tasks')->activate(["task_id" => $task->id]);
+                app('totem.tasks')->activate(['task_id' => $task->id]);
             }
         });
     }

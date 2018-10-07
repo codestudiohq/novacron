@@ -30,7 +30,7 @@ class Frequency extends Select
         parent::options($options);
 
         return $this->withMeta([
-            "frequencies" => $frequencies
+            'frequencies' => $frequencies,
         ]);
     }
 }

@@ -2,16 +2,13 @@
 
 namespace Studio\Novacron\Actions;
 
+use Studio\Totem\Task;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Artisan;
 use Laravel\Nova\Actions\Action;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Fields\ActionFields;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Studio\Totem\Events\Executed;
-use Studio\Totem\Task;
 
 class DisableTask extends Action
 {
@@ -22,7 +19,7 @@ class DisableTask extends Action
      *
      * @var string
      */
-    public $name = "Disable";
+    public $name = 'Disable';
 
     /**
      * Perform the action on the given models.

@@ -1,14 +1,12 @@
 <?php
 
-
 namespace Studio\Novacron;
 
-
+use Laravel\Nova\Resource;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Code;
-use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Text;
-use Laravel\Nova\Resource;
+use Laravel\Nova\Fields\DateTime;
 
 class Result extends Resource
 {
@@ -31,7 +29,6 @@ class Result extends Resource
      *
      * @var array
      */
-
     public static $search = [
 
     ];
@@ -52,12 +49,12 @@ class Result extends Resource
     public function fields(Request $request)
     {
         return [
-            Code::make("Result")
+            Code::make('Result')
                 ->onlyOnDetail(),
-            DateTime::make("Executed At", "ran_at")
+            DateTime::make('Executed At', 'ran_at')
                 ->onlyOnIndex(),
-            Text::make("Duration", function () {
-                return number_format($this->duration / 1000 , 2 ) . " seconds";
+            Text::make('Duration', function () {
+                return number_format($this->duration / 1000, 2).' seconds';
             })->onlyOnIndex(),
         ];
     }
@@ -72,6 +69,7 @@ class Result extends Resource
     {
         return [];
     }
+
     /**
      * Get the filters available for the resource.
      *
@@ -82,6 +80,7 @@ class Result extends Resource
     {
         return [];
     }
+
     /**
      * Get the lenses available for the resource.
      *
@@ -92,6 +91,7 @@ class Result extends Resource
     {
         return [];
     }
+
     /**
      * Get the actions available for the resource.
      *

@@ -2,13 +2,13 @@
 
 namespace Studio\Novacron\Tests;
 
-use Collective\Html\HtmlServiceProvider;
+use Studio\Totem\Totem;
 use Illuminate\Support\Facades\Route;
 use Laravel\Nova\NovaServiceProvider;
+use Collective\Html\HtmlServiceProvider;
 use Studio\Novacron\ToolServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Studio\Totem\Providers\TotemServiceProvider;
-use Studio\Totem\Totem;
 
 abstract class TestCase extends Orchestra
 {
