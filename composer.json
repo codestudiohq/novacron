@@ -1,0 +1,37 @@
+{
+    "name": "studio/novacron",
+    "description": "Manage schedule the nova way",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "owenmelbz/nova-radio-field": "^0.0.5",
+        "studio/laravel-totem": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Studio\\Novacron\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Studio\\Novacron\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "local": {
+            "type": "path",
+            "url": "../../../../packages/studio/laravel-totem"
+        }
+    }
+}

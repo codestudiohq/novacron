@@ -1,0 +1,13 @@
+/.idea
+/build
+/vendor
+/node_modules
+package-lock.json
+yarn.lock
+composer.phar
+composer.lock
+phpunit.xml
+mix-manifest.json
+Thumbs.db
+.phpunit.result.cache
+.DS_Store
