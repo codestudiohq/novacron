@@ -1,8 +1,8 @@
 # Novacron
 
-Manage your `Laravel` schedule through `Nova`.
-
 ***Warning : This is an in flight alpha Version. Please use at your own risk***
+
+Manage your `Laravel` schedule through `Nova`.
 
 ## Installation
 
