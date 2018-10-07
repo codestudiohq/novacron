@@ -9,7 +9,7 @@ services:
   - redis-server
 
 before_install:
-  - echo -e "{ "http-basic" : { "nova.laravel.com" : { "username": $CI_USER_NAME, "password": $CI_USER_PASSWORD}}" > ~/.composer/auth.json
+  - echo -e "{http-basic:{nova.laravel.com:{username:$CI_USER_NAME,password:$CI_USER_PASSWORD}}}" > ~/.composer/auth.json
   - phpenv config-rm xdebug.ini
   - printf "\n" | pecl install -f redis
 
