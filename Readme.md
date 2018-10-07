@@ -37,6 +37,19 @@ Click on the "Novacron" menu item in your Nova app to see the features provided 
 ``` bash
 composer test
 ```
+## Screenshots
+
+##### Task Index View
+
+![](resources/img/screenshots/index.png)
+
+##### Task Details View
+
+![](resources/img/screenshots/details-view.png)
+
+##### Task Edit View
+
+![](resources/img/screenshots/edit-view.png)
 
 ## Changelog
 
