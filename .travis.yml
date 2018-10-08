@@ -11,4 +11,6 @@ before_install:
 
 install: travis_retry composer install --no-interaction --prefer-dist --no-suggest
 
-script: phpunit && npm run test
+script:
+  - phpunit
+  - npm run test
