@@ -1,5 +1,7 @@
 # Novacron
 
+[![Build Status](https://travis-ci.org/codestudiohq/novacron.svg?branch=master)](https://travis-ci.org/codestudiohq/novacron) [![StyleCI](https://styleci.io/repos/151958371/shield?branch=master)](https://styleci.io/repos/99050894) [![Latest Stable Version](https://poser.pugx.org/studio/novacron/v/stable)](https://packagist.org/packages/studio/novacron) [![Total Downloads](https://poser.pugx.org/studio/novacron/downloads)](https://packagist.org/packages/studio/novacron) [![License](https://poser.pugx.org/studio/novacron/license)](https://packagist.org/packages/studio/novacron)
+
 ***Warning : This is an in flight alpha Version. Please use at your own risk***
 
 Manage your `Laravel` schedule through `Nova`.
