@@ -3,14 +3,20 @@ language: php
 php:
   - 7.2
 
+node_js:
+  - "iojs"
+  - "7"
+
 sudo: false
 
 before_install:
   - echo -e "{\"http-basic\":{\"nova.laravel.com\":{\"username\":\"$CI_USER_NAME\",\"password\":\"$CI_USER_PASSWORD\"}}}" > ~/.composer/auth.json
   - phpenv config-rm xdebug.ini
 
-install: travis_retry composer install --no-interaction --prefer-dist --no-suggest
+install:
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+  - npm install
 
 script:
-  - phpunit
+  - vendor/bin/phpunit --verbose
   - npm run test
