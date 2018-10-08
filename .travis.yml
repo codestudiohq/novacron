@@ -18,5 +18,5 @@ install:
   - npm install
 
 script:
-  - vendor/bin/phpunit --verbose
+  - vendor/bin/phpunit --verbose --config phpunit.xml
   - npm run test

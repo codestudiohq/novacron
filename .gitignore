@@ -6,7 +6,6 @@ package-lock.json
 yarn.lock
 composer.phar
 composer.lock
-phpunit.xml
 mix-manifest.json
 Thumbs.db
 .phpunit.result.cache
